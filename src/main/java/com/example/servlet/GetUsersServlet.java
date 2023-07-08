@@ -11,10 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Set;
-
-public class GetUsersServlet {
-    @WebServlet("/users")
-    public class GetServlet extends HttpServlet {
+@WebServlet("/users")
+public class GetUsersServlet extends HttpServlet {
 
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -25,4 +23,4 @@ public class GetUsersServlet {
             rd.forward(req, resp);
         }
     }
-}
+

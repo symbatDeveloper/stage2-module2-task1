@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+@WebServlet("/add")
+public class AddUserServlet extends HttpServlet {
 
-public class AddUserServlet {
-    @WebServlet("/add")
-    public class Addservlet extends HttpServlet {
+
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             User user = new User(
@@ -42,5 +42,5 @@ public class AddUserServlet {
             rd.forward(req, resp);
         }
     }
-}
+
 
